@@ -1,1 +1,1 @@
-# stringi
+# Dawid Kmiecik

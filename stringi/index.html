@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>STRINGI</title>
+</head>
+<body>
+    <h1>STRINGI<h1>
+    <script>
+
+        //Pobieranie długości tekstu
+        const text = "Ala ma kota, a kot ma Ale.";
+
+        text.length; //dlugosc tekstu
+        "Ala ma kota, a kot ma Ale.".length //pobieranie tekstu
+
+        //Pobieranie znaku na danej pozycji
+        console.log(text.charAt(0)) //pierwsza litera (A)
+        console.log(text.charAt(5)) //pierwsza litera (a)
+        console.log(text.charAt(text.length-2)); //drugie od konca (e)
+
+        //Zamiana wielkości liter
+        const text2 = "Kot ma kota";
+
+        console.log(text2.toUpperCase()); //"ALA MA KOTA" zmiana na duze
+        console.log(text2.toLowerCase()); //"ala ma kota" zmiana na male
+
+        //Zwracanie kawałka tekstu substr()
+        const text3 = "Ala ma kota";
+
+        console.log(text3.substr(2)); //"a ma kota" (od 2 litery do konca)
+        console.log(text3.substr(0, 3)); //"Ala" (od poczatku do 3 litery)
+        console.log(text3.substr(7, 4)); //"kota"
+
+        ////Zwracanie kawałka tekstu substring()
+        console.log(text3.substring(0, 3)); //"Ala" (od poczatku do 3 litery)
+        console.log(text3.substring(3)); //"ma kota" (od 3 litery do konca)
+        console.log(text3.substring(6, 4)); //"ma"
+        
+        ////Dzielenie tekstu - split() 
+        const text4 = "Ala ma kota, a kot ma Alę, Ala go kocha, a Kot ją wcale ;("
+        const parts = text4.split(", "); //dzieli tekst po ","
+        parts.forEach(function(letter) {
+        console.log(letter.toUpperCase());
+        }); 
+
+        ////Powtarzanie tekstu - repeat()
+        const text5 = "kot";
+        console.log(text5.repeat(3)); //powtarza kot 3 razy
+
+        ////Wyszukiwanie słowa
+        const text6 = "Ala ma konia";
+
+        if (text6.includes("psa")) {
+        console.log("Ala ma psa" );
+        } else {
+        console.log("Ala ma konia" );
+        }
+
+    </script>
+</body>
+</html>  
